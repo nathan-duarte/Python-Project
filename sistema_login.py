@@ -1,3 +1,5 @@
+# programa de login e senha.
+
 nome = str(input('Digite o seu usuário: '))
 
 senha = str(input('Digite a sua senha: '))
