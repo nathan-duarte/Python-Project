@@ -1,23 +1,15 @@
-# programa de login e senha.
-
 nome = str(input('Digite o seu usuário: '))
 
 senha = str(input('Digite a sua senha: '))
 
+especiais = '!@#$%&*'
 
-if len(nome) < 3 or '':
+if ' ' in nome or len(nome) < 3:
     print('Usuário inválido. Digite novamente.')
 else:
-    print('Usuário ok!')
+    print('Usuário ok!!')
 
-if len(senha) == 0:
-    print('A senha não pode estar vazia. Digite novamente.')
-elif len(senha) < 7:
-    print('Sua senha não contém os caracteres necessários, favor digitar novamente.')
-elif len(senha) == ' ':
-    print('Sua senha não pode conter espaços em branco. Digitar novamente.')
-elif len(senha).isalnum():
-    print('Sua senha não tem cacactere especial. Digitar novamente.')
+if ' ' in senha or len(senha) < 8 or not (set(senha) & set(especiais)):
+    print('Senha inválida. Favor, digitar novamente.')
 else:
-    print('Senha digitada com sucesso!')
-
+    print('Senha correta! Pode acessar!!')
