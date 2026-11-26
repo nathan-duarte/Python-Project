@@ -15,3 +15,4 @@ if ' ' in senha or len(senha) < 8 or not (set(senha) & set(especiais)):
     print('Senha inválida. Favor, digitar novamente.')
 else:
     print('Senha correta! Pode acessar!!')
+
